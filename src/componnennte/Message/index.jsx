@@ -1,10 +1,11 @@
 import { Component } from "react";
 import ButtonRead from "../ButtonRead";
 import ButtonReload from "../ButtonReload";
+import UserMessage from "../UserMassage";
 class Message extends Component {
   state = {
-    name: "User",
-    message: "Hello user",
+    name: "Admin",
+    message: "Hello admin",
     read: false,
   };
   onСlickDisableButton = () => {
@@ -16,12 +17,11 @@ class Message extends Component {
   };
 
   render() {
-    const { name, message, read } = this.state;
+    const { read } = this.state;
 
     return (
       <div>
-        <p>Name user: {name}</p>
-        <p>Mesege: {message}</p>
+        <UserMessage state={this.state} />
         <ButtonRead
           onСlickDisableButton={this.onСlickDisableButton}
           read={read}
