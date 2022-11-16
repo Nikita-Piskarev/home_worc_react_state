@@ -4,8 +4,6 @@ import ButtonReload from "../ButtonReload";
 import UserMessage from "../UserMassage";
 class Message extends Component {
   state = {
-    name: "Admin",
-    message: "Hello admin",
     read: false,
   };
   onСlickDisableButton = () => {
@@ -18,10 +16,11 @@ class Message extends Component {
 
   render() {
     const { read } = this.state;
+    const { userMassage } = this.props;
 
     return (
       <div>
-        <UserMessage state={this.state} />
+        <UserMessage userMassage={userMassage} />
         <ButtonRead
           onСlickDisableButton={this.onСlickDisableButton}
           read={read}

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class UserMessage extends Component {
   render() {
     const {
-      state: { name, message },
+      userMassage: { name, message },
     } = this.props;
     return (
       <>
