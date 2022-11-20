@@ -1,21 +1,24 @@
 import { Component } from "react";
 import ButtonRead from "../ButtonRead";
-import ButtonReload from "../ButtonReload";
-import UserMessage from "../UserMassage";
+import UserMessage from "..";
 class Message extends Component {
   state = {
     read: false,
   };
+
   onСlickDisableButton = () => {
     const { read } = this.state;
+
     const newReand = {
       read: !read,
     };
+
     this.setState(newReand);
   };
 
   render() {
     const { read } = this.state;
+
     const { userMassage } = this.props;
 
     return (
@@ -24,10 +27,6 @@ class Message extends Component {
         <ButtonRead
           onСlickDisableButton={this.onСlickDisableButton}
           read={read}
-        />
-        <ButtonReload
-          onСlickDisableButton={this.onСlickDisableButton}
-          read={!read}
         />
       </div>
     );

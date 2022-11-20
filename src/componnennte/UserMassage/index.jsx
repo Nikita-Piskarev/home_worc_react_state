@@ -7,8 +7,8 @@ class UserMessage extends Component {
     } = this.props;
     return (
       <>
-        <p>Name user: {name ? name : "Guest"}</p>
-        <p>Mesege: {message ? message : "Hello guest"}</p>
+        <p>Name user: {name}</p>
+        <p>Message: {message}</p>
       </>
     );
   }
